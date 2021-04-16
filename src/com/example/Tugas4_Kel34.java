@@ -29,43 +29,75 @@ public class Tugas4_Kel34 {
 
         while (true) {
             menu();
-            System.out.print("Masukkan paket yang ingin Anda beli:");
+            System.out.print("Masukkan paket yang ingin Anda beli: ");
             Scanner scan = new Scanner(System.in);
             pilih = Integer.parseInt(input.next());
 
             switch (pilih) {
                 case 1:
-        System.out.println("Anda akan membeli Paket 35 GB / 1 bulan dengan harga Rp 85.000?");
-        System.out.println("1. Beli");
-        System.out.println("");
-                    int i1=scan.nextInt();
-                    if (i1==1) {
-        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-        System.out.println("");
+                    System.out.println("Anda akan membeli Paket 35 GB / 1 bulan dengan harga Rp 85.000?");
+                    System.out.println("1. Beli");
+                    System.out.println("");
+                    int i1 = scan.nextInt();
+                    if (i1 == 1) {
+                        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                        System.out.println("");
                     }
                     else {
-        System.out.println("Mohon maaf pilihan tidak tersedia.");
-        System.out.println("");
+                        System.out.println("Mohon maaf pilihan tidak tersedia.");
+                        System.out.println("");
                     }
-        System.exit(0);
+                    System.exit(0);
                     break;
                 case 2:
-        System.out.println("Anda akan membeli Paket 15 GB / 1 bulan dengan harga Rp 65.000?");
-        System.out.println("1. Beli");
-        System.out.println("");
-                    int i2=scan.nextInt();
-                    if (i2==1) {
-        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-        System.out.println("");
+                    System.out.println("Anda akan membeli Paket 15 GB / 1 bulan dengan harga Rp 65.000?");
+                    System.out.println("1. Beli");
+                    System.out.println("");
+                    int i2 = scan.nextInt();
+                    if (i2 == 1) {
+                        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                        System.out.println("");
                     }
                     else {
-        System.out.println("Mohon maaf pilihan tidak tersedia.");
-        System.out.println("");
+                        System.out.println("Mohon maaf pilihan tidak tersedia.");
+                        System.out.println("");
                     }
-        System.exit(0);
+                    System.exit(0);
                     break;
-                    
-
+                case 3:
+                    System.out.println("Anda akan membeli Paket 5 GB / 1 bulan dengan harga Rp40.000?");
+                    System.out.println("1. Beli");
+                    System.out.println("");
+                    int i3 = scan.nextInt();
+                    if (i3 == 1) {
+                        System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
+                        System.out.println();
+                    }
+                    else {
+                        System.out.println("Mohon maaf pilihan tidak tersedia.");
+                        System.out.println();
+                    }
+                    System.exit(0);
+                    break;
+                case 4:
+                    System.out.println("Anda akan membeli Paket 3 GB / 1 bulan dengan harga Rp30.000?");
+                    System.out.println("1. Beli");
+                    System.out.println("");
+                    int i4 = scan.nextInt();
+                    if (i4 == 1) {
+                        System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
+                        System.out.println();
+                    }
+                    else {
+                        System.out.println("Mohon maaf pilihan tidak tersedia.");
+                        System.out.println();
+                    }
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia. ");
+                    break;
+            }
         }
     }
 }
