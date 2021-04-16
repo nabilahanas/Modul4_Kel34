@@ -49,6 +49,22 @@ public class Tugas4_Kel34 {
                     }
         System.exit(0);
                     break;
+                case 2:
+        System.out.println("Anda akan membeli Paket 15 GB/1 bulan dengan harga Rp65.000?");
+        System.out.println("1. Beli");
+        System.out.println("");
+                    int i2=scan.nextInt();
+                    if (i2==1) {
+        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+        System.out.println("");
+                    }
+                    else {
+        System.out.println("Mohon maaf pilihan tidak tersedia.");
+        System.out.println("");
+                    }
+        System.exit(0);
+                    break;
+                    
 
         }
     }
