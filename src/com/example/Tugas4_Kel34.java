@@ -32,6 +32,24 @@ public class Tugas4_Kel34 {
             System.out.print("Masukkan paket yang ingin Anda beli:");
             Scanner scan = new Scanner(System.in);
             pilih = Integer.parseInt(input.next());
+
+            switch (pilih) {
+                case 1:
+        System.out.println("Anda akan membeli Paket 35 GB/1 bulan denganharga Rp85.000?");
+        System.out.println("1. Beli");
+        System.out.println("");
+                    int i1=scan.nextInt();
+                    if (i1==1) {
+        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+        System.out.println("");
+                    }
+                    else {
+        System.out.println("Mohon maaf pilihan tidak tersedia.");
+        System.out.println("");
+                    }
+        System.exit(0);
+                    break;
+
         }
     }
 }
