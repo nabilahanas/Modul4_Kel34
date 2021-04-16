@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Tugas4_Kel34 {
     public static void menu() {
         System.out.println("################################################");
-        System.out.println("Sisa pulsa Anda Rp50.000. Aktif s.d. 21/03/2034");
+        System.out.println("Sisa pulsa Anda Rp 50.000. Aktif s.d. 21/03/2034");
         System.out.println("################################################");
         System.out.println("");
         System.out.println("Paket Internet Bulanan");
         System.out.println("");
-        System.out.println("1. 35GB/1Bln        Rp85.000");
-        System.out.println("2. 15GB/1Bln        Rp65.000");
-        System.out.println("3. 5GB/1Bln         Rp40.000");
-        System.out.println("4. 3GB/1Bln         Rp30.000");
+        System.out.println("1. 35GB/1Bln        Rp 85.000");
+        System.out.println("2. 15GB/1Bln        Rp 65.000");
+        System.out.println("3. 5GB/1Bln         Rp 40.000");
+        System.out.println("4. 3GB/1Bln         Rp 30.000");
         System.out.println("");
         System.out.println("################################################");
     }
@@ -35,7 +35,7 @@ public class Tugas4_Kel34 {
 
             switch (pilih) {
                 case 1:
-        System.out.println("Anda akan membeli Paket 35 GB/1 bulan denganharga Rp85.000?");
+        System.out.println("Anda akan membeli Paket 35 GB / 1 bulan dengan harga Rp 85.000?");
         System.out.println("1. Beli");
         System.out.println("");
                     int i1=scan.nextInt();
@@ -50,7 +50,7 @@ public class Tugas4_Kel34 {
         System.exit(0);
                     break;
                 case 2:
-        System.out.println("Anda akan membeli Paket 15 GB/1 bulan dengan harga Rp65.000?");
+        System.out.println("Anda akan membeli Paket 15 GB / 1 bulan dengan harga Rp 65.000?");
         System.out.println("1. Beli");
         System.out.println("");
                     int i2=scan.nextInt();
