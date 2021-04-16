@@ -8,10 +8,10 @@ public class Tugas4_Kel34 {
         System.out.println("");
         System.out.println("Paket Internet Bulanan");
         System.out.println("");
-        System.out.println("1. 35GB/1Bln");
-        System.out.println("2. 15GB/1Bln");
-        System.out.println("3. 5GB/1Bln");
-        System.out.println("4. 3GB/1Bln");
+        System.out.println("1. 35GB/1Bln        Rp85.000");
+        System.out.println("2. 15GB/1Bln        Rp65.000");
+        System.out.println("3. 5GB/1Bln         Rp40.000");
+        System.out.println("4. 3GB/1Bln         Rp30.000");
         System.out.println("");
         System.out.println("################################################");
     }
