@@ -2,7 +2,7 @@ package com.example;
 import java.util.Scanner;
 public class Tugas4_Kel34 {
     
-    public static int pulsa = 50000;
+    public static int pulsa = 100000;
     public static int harga1 = 85000;
     public static int harga2 = 65000;
     public static int harga3 = 40000;
@@ -90,7 +90,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        menu();
+                        System.exit(0);
                     }
                     break;
                 case 2:
@@ -117,7 +117,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        menu();
+                        System.exit(0);
                     }
                     break;
                 case 3:
@@ -144,7 +144,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        menu();
+                        System.exit(0);
                     }
                     break;
                 case 4:
@@ -171,11 +171,11 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        menu();
+                        System.exit(0);
                     }
                     break;
                 case 5:
-                    System.out.println("Terima kasih");
+                    System.out.println("Terima kasih.");
                     System.exit(0);
                     break;
                 default:
