@@ -2,7 +2,7 @@ package com.example;
 import java.util.Scanner;
 public class Tugas4_Kel34 {
     
-    public static int pulsa = 100000;
+    public static int pulsa = 50000;
     public static int harga1 = 85000;
     public static int harga2 = 65000;
     public static int harga3 = 40000;
