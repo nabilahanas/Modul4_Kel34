@@ -27,26 +27,28 @@ public class Tugas4_Kel34 {
 
     public static void ulang(){
         Scanner input = new Scanner(System.in);
-
         int pilihan;
-
         System.out.println("Apakah ingin melakukan transaksi lagi? (1/0)");
         System.out.println("1. Ya");
         System.out.println("0. Tidak");
         pilihan = Integer.parseInt(input.next());
 
-        if(pilihan == 1){
+        if (pilihan == 1){
             System.out.println();
             menu();
-        }else if(pilihan == 0){
+        }
+        else if (pilihan == 0){
             System.out.println("Terima kasih");
+            System.exit(0);
+        }
+        else {
+            System.out.println("Mohon maaf pilihan Anda tidak tersedia");
             System.exit(0);
         }
     }
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         int pilih;
 
         System.out.println("Kelompok 34");
@@ -75,6 +77,7 @@ public class Tugas4_Kel34 {
                             System.out.println("Selamat! Paket 35 GB / 1 bulan Anda telah aktif.");
                             pulsa -= harga1;
                             System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            System.out.println("");
                             ulang();
                         }
                         else {
@@ -101,6 +104,7 @@ public class Tugas4_Kel34 {
                             System.out.println("Selamat! Paket 15 GB / 1 bulan Anda telah aktif.");
                             pulsa -= harga2;
                             System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            System.out.println("");
                             ulang();
                         }
                         else {
@@ -127,6 +131,7 @@ public class Tugas4_Kel34 {
                             System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
                             pulsa -= harga3;
                             System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            System.out.println("");
                             ulang();
                         }
                         else {
@@ -153,6 +158,7 @@ public class Tugas4_Kel34 {
                             System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
                             pulsa -= harga4;
                             System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            System.out.println("");
                             ulang();
                         }
                         else {
@@ -173,7 +179,7 @@ public class Tugas4_Kel34 {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia.");
+                    System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia.\n");
                     menu();
                     break;
             }
