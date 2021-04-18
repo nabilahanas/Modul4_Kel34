@@ -1,10 +1,16 @@
 package com.example;
 import java.util.Scanner;
 public class Tugas4_Kel34 {
+    
+    public static int pulsa = 50000;
+    public static int harga1 = 85000;
+    public static int harga2 = 65000;
+    public static int harga3 = 40000;
+    public static int harga4 = 30000;
+    
     public static void menu() {
-        int pulsa = 50000;
         System.out.println("################################################");
-        System.out.println("Sisa pulsa Anda Rp"+ pulsa);
+        System.out.println("Sisa pulsa Anda Rp " + pulsa);
         System.out.println("Aktif s.d. 21/03/2034");
         System.out.println("################################################");
         System.out.println("");
@@ -14,18 +20,34 @@ public class Tugas4_Kel34 {
         System.out.println("2. 15GB/1Bln        Rp 65.000");
         System.out.println("3. 5GB/1Bln         Rp 40.000");
         System.out.println("4. 3GB/1Bln         Rp 30.000");
+        System.out.println("5. Keluar");
         System.out.println("");
         System.out.println("################################################");
     }
 
+    public static void ulang(){
+        Scanner input = new Scanner(System.in);
+
+        int pilihan;
+
+        System.out.println("Apakah ingin melakukan transaksi lagi? (1/0)");
+        System.out.println("1. Ya");
+        System.out.println("0. Tidak");
+        pilihan = Integer.parseInt(input.next());
+
+        if(pilihan == 1){
+            System.out.println();
+            menu();
+        }else if(pilihan == 0){
+            System.out.println("Terima kasih");
+            System.exit(0);
+        }
+    }
+    
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         int pilih;
-        int pulsa = 50000;
-        int harga1 = 85000;
-        int harga2 = 65000;
-        int harga3 = 40000;
-        int harga4 = 30000;
 
         System.out.println("Kelompok 34");
         String[][] anggota = {{"Fairuzsyah Naufal Fikri", "Nabila Hana Saphira", "Fadillah Hamdi Wanadi", "Muhammad Irhamsyah Arrahim"}, {"21120120130110", "21120120140112", "21120120120025", "21120120140157"}};
@@ -38,7 +60,6 @@ public class Tugas4_Kel34 {
         menu();
         while (true) {
             System.out.print("Masukkan paket yang ingin Anda beli: ");
-            System.out.println("");
             Scanner scan = new Scanner(System.in);
             pilih = Integer.parseInt(input.next());
 
@@ -52,12 +73,13 @@ public class Tugas4_Kel34 {
                     if (i1 == 1) {
                         if (pulsa >= harga1) {
                             System.out.println("Selamat! Paket 35 GB / 1 bulan Anda telah aktif.");
-                            System.out.println("Sisa pulsa Anda Rp"+ (pulsa-harga1));
-                            System.exit(0);
+                            pulsa -= harga1;
+                            System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            ulang();
                         }
                         else {
-                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                            System.exit(0);
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                            menu();
                         }
                     }
                     else if (i1 == 0) {
@@ -65,7 +87,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        System.exit(0);
+                        menu();
                     }
                     break;
                 case 2:
@@ -77,12 +99,13 @@ public class Tugas4_Kel34 {
                     if (i2 == 1) {
                         if (pulsa >= harga2) {
                             System.out.println("Selamat! Paket 15 GB / 1 bulan Anda telah aktif.");
-                            System.out.println("Sisa pulsa Anda Rp"+ (pulsa-harga2));
-                            System.exit(0);
+                            pulsa -= harga2;
+                            System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            ulang();
                         }
                         else {
-                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                            System.exit(0);
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                            menu();
                         }
                     }
                     else if (i2 == 0) {
@@ -90,7 +113,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        System.exit(0);
+                        menu();
                     }
                     break;
                 case 3:
@@ -102,12 +125,13 @@ public class Tugas4_Kel34 {
                     if (i3 == 1) {
                         if (pulsa >= harga3) {
                             System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
-                            System.out.println("Sisa pulsa Anda Rp" + (pulsa - harga3));
-                            System.exit(0);
+                            pulsa -= harga3;
+                            System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            ulang();
                         }
                         else {
-                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                            System.exit(0);
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                            menu();
                         }
                     }
                     else if (i3 == 0) {
@@ -115,7 +139,7 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        System.exit(0);
+                        menu();
                     }
                     break;
                 case 4:
@@ -127,12 +151,13 @@ public class Tugas4_Kel34 {
                     if (i4 == 1) {
                         if (pulsa >= harga4) {
                             System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
-                            System.out.println("Sisa pulsa Anda Rp" + (pulsa - harga4));
-                            System.exit(0);
+                            pulsa -= harga4;
+                            System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                            ulang();
                         }
                         else {
-                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                            System.exit(0);
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                            menu();
                         }
                     }
                     else if (i4 == 0) {
@@ -140,12 +165,16 @@ public class Tugas4_Kel34 {
                     }
                     else {
                         System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
-                        System.exit(0);
+                        menu();
                     }
+                    break;
+                case 5:
+                    System.out.println("Terima kasih");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia.");
-                    System.exit(0);
+                    menu();
                     break;
             }
         }
