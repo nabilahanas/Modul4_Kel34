@@ -2,8 +2,10 @@ package com.example;
 import java.util.Scanner;
 public class Tugas4_Kel34 {
     public static void menu() {
+        int pulsa = 50000;
         System.out.println("################################################");
-        System.out.println("Sisa pulsa Anda Rp 50.000. Aktif s.d. 21/03/2034");
+        System.out.println("Sisa pulsa Anda Rp"+ pulsa);
+        System.out.println("Aktif s.d. 21/03/2034");
         System.out.println("################################################");
         System.out.println("");
         System.out.println("Paket Internet Bulanan");
@@ -19,6 +21,12 @@ public class Tugas4_Kel34 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int pilih;
+        int pulsa = 50000;
+        int harga1 = 85000;
+        int harga2 = 65000;
+        int harga3 = 40000;
+        int harga4 = 30000;
+
         System.out.println("Kelompok 34");
         String[][] anggota = {{"Fairuzsyah Naufal Fikri", "Nabila Hana Saphira", "Fadillah Hamdi Wanadi", "Muhammad Irhamsyah Arrahim"}, {"21120120130110", "21120120140112", "21120120120025", "21120120140157"}};
         System.out.println(anggota[0][0] + " (" + anggota[1][0] + ")");
@@ -27,9 +35,10 @@ public class Tugas4_Kel34 {
         System.out.println(anggota[0][3] + " (" + anggota[1][3] + ")");
         System.out.println("");
 
+        menu();
         while (true) {
-            menu();
             System.out.print("Masukkan paket yang ingin Anda beli: ");
+            System.out.println("");
             Scanner scan = new Scanner(System.in);
             pilih = Integer.parseInt(input.next());
 
@@ -37,65 +46,106 @@ public class Tugas4_Kel34 {
                 case 1:
                     System.out.println("Anda akan membeli Paket 35 GB / 1 bulan dengan harga Rp 85.000?");
                     System.out.println("1. Beli");
+                    System.out.println("0. Kembali");
                     System.out.println("");
                     int i1 = scan.nextInt();
                     if (i1 == 1) {
-                        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                        System.out.println("");
+                        if (pulsa >= harga1) {
+                            System.out.println("Selamat! Paket 35 GB / 1 bulan Anda telah aktif.");
+                            System.out.println("Sisa pulsa Anda Rp"+ (pulsa-harga1));
+                            System.exit(0);
+                        }
+                        else {
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                            System.exit(0);
+                        }
+                    }
+                    else if (i1 == 0) {
+                        menu();
                     }
                     else {
-                        System.out.println("Mohon maaf pilihan tidak tersedia.");
-                        System.out.println("");
+                        System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                        System.exit(0);
                     }
-                    System.exit(0);
                     break;
                 case 2:
                     System.out.println("Anda akan membeli Paket 15 GB / 1 bulan dengan harga Rp 65.000?");
                     System.out.println("1. Beli");
+                    System.out.println("0. Kembali");
                     System.out.println("");
                     int i2 = scan.nextInt();
                     if (i2 == 1) {
-                        System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
-                        System.out.println("");
+                        if (pulsa >= harga2) {
+                            System.out.println("Selamat! Paket 15 GB / 1 bulan Anda telah aktif.");
+                            System.out.println("Sisa pulsa Anda Rp"+ (pulsa-harga2));
+                            System.exit(0);
+                        }
+                        else {
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                            System.exit(0);
+                        }
+                    }
+                    else if (i2 == 0) {
+                        menu();
                     }
                     else {
-                        System.out.println("Mohon maaf pilihan tidak tersedia.");
-                        System.out.println("");
+                        System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                        System.exit(0);
                     }
-                    System.exit(0);
                     break;
                 case 3:
                     System.out.println("Anda akan membeli Paket 5 GB / 1 bulan dengan harga Rp40.000?");
                     System.out.println("1. Beli");
+                    System.out.println("0. Kembali");
                     System.out.println("");
                     int i3 = scan.nextInt();
                     if (i3 == 1) {
-                        System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
-                        System.out.println();
+                        if (pulsa >= harga3) {
+                            System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
+                            System.out.println("Sisa pulsa Anda Rp" + (pulsa - harga3));
+                            System.exit(0);
+                        }
+                        else {
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                            System.exit(0);
+                        }
+                    }
+                    else if (i3 == 0) {
+                        menu();
                     }
                     else {
-                        System.out.println("Mohon maaf pilihan tidak tersedia.");
-                        System.out.println();
+                        System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                        System.exit(0);
                     }
-                    System.exit(0);
                     break;
                 case 4:
                     System.out.println("Anda akan membeli Paket 3 GB / 1 bulan dengan harga Rp30.000?");
                     System.out.println("1. Beli");
+                    System.out.println("0. Kembali");
                     System.out.println("");
                     int i4 = scan.nextInt();
                     if (i4 == 1) {
-                        System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
-                        System.out.println();
+                        if (pulsa >= harga4) {
+                            System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
+                            System.out.println("Sisa pulsa Anda Rp" + (pulsa - harga4));
+                            System.exit(0);
+                        }
+                        else {
+                            System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya.");
+                            System.exit(0);
+                        }
+                    }
+                    else if (i4 == 0) {
+                        menu();
                     }
                     else {
-                        System.out.println("Mohon maaf pilihan tidak tersedia.");
-                        System.out.println();
+                        System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                        System.exit(0);
                     }
-                    System.exit(0);
                     break;
                 default:
-                    System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia. ");
+                    System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia.");
+                    System.exit(0);
                     break;
             }
         }
