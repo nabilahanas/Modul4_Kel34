@@ -1,5 +1,10 @@
 package com.example;
 import java.util.Scanner;
+
+ /*
+ * @author nabilahanas
+ */
+
 public class Tugas4_Kel34 {
     
     public static int pulsa = 50000;
